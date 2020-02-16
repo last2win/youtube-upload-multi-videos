@@ -1,5 +1,5 @@
-# Youtube Uploader: auto upload multi youtube videos
-Node.js Script to upload multiple videos to youtube
+# Youtube Uploader: auto upload multiple youtube videos
+Node.js Script to upload videos in bulk to youtube
 
 ## Setup
 1. install node.js 
@@ -9,3 +9,7 @@ Node.js Script to upload multiple videos to youtube
 ```sh
 npm i puppeteer
 ```
+
+## Usage
+
+
