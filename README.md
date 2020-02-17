@@ -12,6 +12,22 @@ Support platform: windows/linux
 npm install puppeteer@2.0.0
 ```
 
+3. login google account, you can use chrome installed by Puppeteer, which in directory:`node_modules/puppeteer/.local-chromium/win64-706915/chrome-win/chrome`
+
+and goto page `chrome://version/` to get Profile Path: `C:\Users\peter\AppData\Local\Chromium\User Data\Default`, which delete `Default` to be user Data Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`
+
+you can also use local chrome.
+
+
 ## Usage
+
+set chrome_user_data_directory and upload_file_directory. 
+
+
+
+
+
+
+
 
 
