@@ -1,0 +1,7 @@
+{
+  "name": "youtube-upload-multi-videos",
+  "version": "1.0.0",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
+}
