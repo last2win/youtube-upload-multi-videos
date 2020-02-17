@@ -2,48 +2,20 @@
 
 const fs = require("fs");
 
-
 // load puppeteer
 const puppeteer = require('puppeteer');
-
 
 const window_height = 768;
 const window_width = 1366;
 const studio_url = "https://studio.youtube.com/";
 
 // directory contains the videos you want to upload
-const upload_file_directory = "D:\\BaiduNetdiskDownload\\Python爬虫\\";
+const upload_file_directory = "your video directory";
 // change user data directory to your directory
-const chrome_user_data_directory = "C:\\Users\\peter\\AppData\\Local\\Chromium\\User Data";
+const chrome_user_data_directory = "C:\\Users\\user\\AppData\\Local\\Chromium\\User Data";
 
-const title_prefix="嵩天教授 Python爬虫课程: ";
+const title_prefix="video title prefix ";
 const video_description="";
-const CHROME_DEFAULT_ARGS = [
-    '--disable-background-networking',
-    '--enable-features=NetworkService,NetworkServiceInProcess',
-    '--disable-background-timer-throttling',
-    '--disable-backgrounding-occluded-windows',
-    '--disable-breakpad',
-    '--disable-client-side-phishing-detection',
-    '--disable-component-extensions-with-background-pages',
-    '--disable-default-apps',
-    '--disable-dev-shm-usage',
-    '--disable-extensions',
-    // BlinkGenPropertyTrees disabled due to crbug.com/937609
-    '--disable-features=TranslateUI,BlinkGenPropertyTrees',
-    '--disable-hang-monitor',
-    '--disable-ipc-flooding-protection',
-    '--disable-popup-blocking',
-    '--disable-prompt-on-repost',
-    '--disable-renderer-backgrounding',
-    '--disable-sync',
-    '--force-color-profile=srgb',
-    '--metrics-recording-only',
-    '--no-first-run',
-    '--enable-automation',
-    '--password-store=basic',
-    '--use-mock-keychain',
-];
 
 let files = [];
 fs.readdir(upload_file_directory, function (err, temp_files) {
@@ -61,11 +33,9 @@ try {
         const browser = await puppeteer.launch(
             {
                 'headless': false,    // have window
-                // 'headless': true,  //  no window
-                //'defaultViewport': null,
                 executablePath: null,
                 userDataDir: chrome_user_data_directory,
-                ignoreDefaultArgs: CHROME_DEFAULT_ARGS,
+                ignoreDefaultArgs: ["--enable-automation"],
                 autoClose: false,
                 args: ['--lang=en-US,en',
                     `--window-size=${window_width},${window_height}`,
@@ -79,7 +49,8 @@ try {
 
         for (let i = 0; i < files.length; i++) {
             const file_name = files[i];
-            console.log(file_name);
+            console.log("now process file:\t"+file_name);
+
             //click create icon
             await page.click('#create-icon');
 
@@ -99,7 +70,7 @@ try {
             // title content
             await page.type('#textbox', title_prefix + file_name.replace('.mp4',''));
             await sleep(1000);
-            // Description content
+            // Description content, default to be null
             await page.type('#child-input', video_description);
 
             await sleep(1000);
@@ -123,8 +94,8 @@ try {
             // close
             await page.click('#close-button > div');
 
-            // wait 10 seconds
-            await sleep(10 * 1000);
+            // wait 60 seconds
+            await sleep(60 * 1000);
         }
         await browser.close();
     })();
