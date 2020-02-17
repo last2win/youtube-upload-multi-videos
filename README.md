@@ -1,5 +1,5 @@
 # Youtube Uploader: auto upload multiple youtube videos
-Node.js Script to upload videos in bulk to youtube
+Node.js Script to upload multiple videos to youtube
 
 Support platform: windows/linux
 
@@ -30,7 +30,7 @@ run script
 node upload.js
 ```
 
-it will open chrome and upload each video in directory you specified, after each upload, it will wait 60 seconds to start next upload.
+it will open chrome and auto upload each video in directory you specified, after each upload, it will wait 60 seconds to start next upload.
 
 
 
