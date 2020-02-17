@@ -80,7 +80,7 @@ try {
             // await page.click('#items > ytcp-ve:nth-child(3)');
             // await page.click('#dialog > div.action-buttons.style-scope.ytcp-playlist-dialog > ytcp-button.save-button.action-button.style-scope.ytcp-playlist-dialog > div');
             // await sleep(500);
-            
+
             //click next
             await page.click('#dialog > div > ytcp-animatable.button-area.metadata-fade-in-section.style-scope.ytcp-uploads-dialog > div > div.right-button-area.style-scope.ytcp-uploads-dialog');
             await sleep(1000);

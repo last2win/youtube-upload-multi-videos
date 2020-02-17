@@ -21,8 +21,16 @@ you can also use local chrome.
 
 ## Usage
 
-set chrome_user_data_directory and upload_file_directory. 
+Download `upload.js`
 
+then change variable: chrome_user_data_directory, upload_file_directory, title_prefix, video_description.
+
+run script
+```sh
+node upload.js
+```
+
+it will open chrome and upload each video in directory you specified, after each upload, it will wait 60 seconds to start next upload.
 
 
 
