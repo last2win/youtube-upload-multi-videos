@@ -28,6 +28,10 @@ then change variable: chrome_user_data_directory, upload_file_directory, title_p
 
 run script
 ```sh
+git clone https://github.com/zhang0peter/youtube-upload-multi-videos.git
+cd youtube-upload-multi-videos/
+npm install puppeteer@2.0.0
+# login google account and set variables
 node upload.js
 ```
 
