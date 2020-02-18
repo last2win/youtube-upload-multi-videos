@@ -12,8 +12,8 @@ const upload_file_directory = "your video directory";
 // change user data directory to your directory
 const chrome_user_data_directory = "C:\\Users\\user\\AppData\\Local\\Chromium\\User Data";
 
-const title_prefix="video title prefix ";
-const video_description="";
+const title_prefix = "video title prefix ";
+const video_description = "";
 
 let files = [];
 fs.readdir(upload_file_directory, function (err, temp_files) {
@@ -38,6 +38,7 @@ try {
                 args: ['--lang=en-US,en',
                     `--window-size=${window_width},${window_height}`,
                     '--enable-audio-service-sandbox',
+                    '--no-sandbox',
                 ],
             }
         );
@@ -47,7 +48,7 @@ try {
 
         for (let i = 0; i < files.length; i++) {
             const file_name = files[i];
-            console.log("now process file:\t"+file_name);
+            console.log("now process file:\t" + file_name);
 
             //click create icon
             await page.click('#create-icon');
@@ -60,13 +61,13 @@ try {
                 page.waitForFileChooser(),
                 page.click('#select-files-button > div'), // some button that triggers file selection
             ]);
-            await fileChooser.accept([upload_file_directory+file_name]);
+            await fileChooser.accept([upload_file_directory + file_name]);
 
             // wait 10 seconds
             await sleep(10_000);
 
             // title content
-            await page.type('#textbox', title_prefix + file_name.replace('.mp4',''));
+            await page.type('#textbox', title_prefix + file_name.replace('.mp4', ''));
             await sleep(1000);
             // Description content, default to be null
             await page.type('#child-input', video_description);
