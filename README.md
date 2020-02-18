@@ -1,18 +1,19 @@
-# Youtube Uploader: auto upload multiple youtube videos
+# Youtube Uploader: auto upload multiple youtube videos 批量上传youtube视频
 Node.js Script to upload multiple videos to youtube
 
 Support platform: windows/linux
 
 ## Setup
-1. install node.js 
 
-2. install `Puppeteer` to control chrome
+1.install node.js 
+
+2.install `Puppeteer` to control chrome
 
 ```sh
 npm install puppeteer@2.0.0
 ```
 
-3. login google account, you can use chrome installed by Puppeteer, which in directory:`node_modules/puppeteer/.local-chromium/win64-706915/chrome-win/chrome`
+3.login google account, you can use chrome installed by Puppeteer, which in directory:`node_modules/puppeteer/.local-chromium/win64-706915/chrome-win/chrome`
 
 and goto page `chrome://version/` to get Profile Path: `C:\Users\peter\AppData\Local\Chromium\User Data\Default`, which delete `Default` to be user Data Dir: `C:\Users\peter\AppData\Local\Chromium\User Data`
 

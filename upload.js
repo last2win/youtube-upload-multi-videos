@@ -57,7 +57,7 @@ try {
             //click upload video
             await page.click('#text-item-0 > ytcp-ve');
             await sleep(500);
-            //click select-files-button and upload file
+            //click select files button and upload file
             const [fileChooser] = await Promise.all([
                 page.waitForFileChooser(),
                 page.click('#select-files-button > div'), // some button that triggers file selection
