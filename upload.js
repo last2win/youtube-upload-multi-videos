@@ -15,6 +15,33 @@ const chrome_user_data_directory = "C:\\Users\\user\\AppData\\Local\\Chromium\\U
 const title_prefix = "video title prefix ";
 const video_description = "";
 
+const DEFAULT_ARGS = [
+    '--disable-background-networking',
+    '--enable-features=NetworkService,NetworkServiceInProcess',
+    '--disable-background-timer-throttling',
+    '--disable-backgrounding-occluded-windows',
+    '--disable-breakpad',
+    '--disable-client-side-phishing-detection',
+    '--disable-component-extensions-with-background-pages',
+    '--disable-default-apps',
+    '--disable-dev-shm-usage',
+    '--disable-extensions',
+    // BlinkGenPropertyTrees disabled due to crbug.com/937609
+    '--disable-features=TranslateUI,BlinkGenPropertyTrees',
+    '--disable-hang-monitor',
+    '--disable-ipc-flooding-protection',
+    '--disable-popup-blocking',
+    '--disable-prompt-on-repost',
+    '--disable-renderer-backgrounding',
+    '--disable-sync',
+    '--force-color-profile=srgb',
+    '--metrics-recording-only',
+    '--no-first-run',
+    '--enable-automation',
+    '--password-store=basic',
+    '--use-mock-keychain',
+];
+
 let files = [];
 fs.readdir(upload_file_directory, function (err, temp_files) {
     if (err) {
@@ -33,7 +60,7 @@ try {
                 'headless': false,    // have window
                 executablePath: null,
                 userDataDir: chrome_user_data_directory,
-                ignoreDefaultArgs: ["--enable-automation"],
+                ignoreDefaultArgs: DEFAULT_ARGS,
                 autoClose: false,
                 args: ['--lang=en-US,en',
                     `--window-size=${window_width},${window_height}`,
