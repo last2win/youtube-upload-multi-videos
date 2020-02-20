@@ -94,10 +94,13 @@ try {
             await sleep(10_000);
 
             // title content
-            await page.type('#textbox', title_prefix + file_name.replace('.mp4', ''));
+            const text_box = await page.$x("//*[@id=\"textbox\"]");
+            await text_box[0].type(title_prefix + file_name.replace('.mp4', ''));
+            //  await page.type('#textbox', title_prefix + file_name.replace('.mp4',''));
             await sleep(1000);
-            // Description content, default to be null
-            await page.type('#child-input', video_description);
+
+            // Description content
+            await text_box[1].type(video_description);
 
             await sleep(1000);
             // add video to the second playlists
