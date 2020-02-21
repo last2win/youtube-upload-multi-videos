@@ -1,6 +1,6 @@
 # Youtube Uploader: auto upload multiple youtube videos 批量上传youtube视频
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=G3ZDMEQVR5ZCJ)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=G3ZDMEQVR5ZCJ)
 
 
 Node.js Script to upload multiple videos to youtube
