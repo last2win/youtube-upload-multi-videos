@@ -1,6 +1,7 @@
 # Youtube Uploader: auto upload multiple youtube videos 批量上传youtube视频
 
-[![Gitter](https://badges.gitter.im/youtube-upload-multi-videos/community.svg)](https://gitter.im/youtube-upload-multi-videos/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=G3ZDMEQVR5ZCJ)
+
 
 Node.js Script to upload multiple videos to youtube
 
