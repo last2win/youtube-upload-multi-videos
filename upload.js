@@ -117,7 +117,7 @@ try {
             await page.click('#dialog > div > ytcp-animatable.button-area.metadata-fade-in-section.style-scope.ytcp-uploads-dialog > div > div.right-button-area.style-scope.ytcp-uploads-dialog');
             await sleep(1000);
             //click publish now and public
-            await page.click('#publish-now-container');
+            await page.click('#first-container');
             await page.click('#privacy-radios > paper-radio-button:nth-child(1)');
             await page.click('#done-button');
             await sleep(5000);
