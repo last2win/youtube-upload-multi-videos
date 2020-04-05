@@ -17,7 +17,7 @@ Support platform: windows/linux
 npm install puppeteer@2.0.0
 ```
 
-3.login google account, you can use chrome installed by Puppeteer, which in directory following or you can also use local chrome.
+3.login google account, you can use chrome installed by Puppeteer, which in following directory  or you can also use local chrome.
 
 `Windows`:`node_modules/puppeteer/.local-chromium/win64-706915/chrome-win/chrome`            
 `Linux`:`node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome`      
