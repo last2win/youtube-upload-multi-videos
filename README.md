@@ -17,19 +17,20 @@ Support platform: windows/linux
 npm install puppeteer@2.0.0
 ```
 
-3.login google account, you can use chrome installed by Puppeteer, which in directory
+3.login google account, you can use chrome installed by Puppeteer, which in directory following or you can also use local chrome.
 
 `Windows`:`node_modules/puppeteer/.local-chromium/win64-706915/chrome-win/chrome`            
 `Linux`:`node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome`      
 
 open chrome and goto page `chrome://version/` to get Profile Path, which delete `Default` to be user Data Dir.
+
 `Windows Profile Path`:`C:\Users\peter\AppData\Local\Chromium\User Data\Default`      
 `Windows user Data Dir`: `C:\Users\peter\AppData\Local\Chromium\User Data`   
 
 `Linux Profile Path`:`/home/vncviewer/.config/chromium/Default`      
 `Linux user Data Dir`: `/home/vncviewer/.config/chromium/`   
 
-you can also use local chrome.
+
 
 **login google account manually**
 
